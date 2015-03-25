@@ -3,6 +3,9 @@
 # only Main files contain this front matter, not partials.
 ---
 /* Global */
+
+@import "variables";
+
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800);
 
 @charset "utf-8";
@@ -16,14 +19,14 @@ body{
   font-family: 'Open Sans', Arial, Tahoma;
   font-weight: 400;
   font-size: 1em;
-  color: #363636;
-  background: #ededed;
+  color: $text_color;
+  background: $body_background_color;
 }
 
 .container{
   margin-top: 80px;
   margin-bottom: 15px;
-  background: #fff;
+  background: $container_background_color;
 }
 
 #photo-header{
@@ -78,7 +81,7 @@ body{
   margin-bottom: 15px;
 }
 .box h2{
-  color: #EC7263;
+  color: $theme_color;
   font-size: 1.8em;
   font-weight: 700;
   text-transform: uppercase;
@@ -93,13 +96,13 @@ body{
 }
 
 /* Education */
-#education{
+#timeline{
   margin-top: 20px;
   position: relative;
   padding: 1em 0;
   list-style: none;
 }
-#education:before {
+#timeline:before {
   width: 5px;
   height: 100%;
   position: absolute;
@@ -107,7 +110,7 @@ body{
   top: 0;
   content: ' ';
   display: block;
-  background: #ec7263;
+  background: $theme_color;
   background: -moz-linear-gradient(top,  #ffffff 0%, #ec7263 7%, #ec7263 89%, #ffffff 100%);
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(7%,#ec7263), color-stop(89%,#ec7263), color-stop(100%,#ffffff));
   background: -webkit-linear-gradient(top,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
@@ -116,13 +119,13 @@ body{
   background: linear-gradient(to bottom,  #ffffff 0%,#ec7263 7%,#ec7263 89%,#ffffff 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 );
 }
-#education li{
+#timeline li{
   width: 100%;
   z-index: 2;
   position: relative;
   float: left;
 }
-#education .year{
+#timeline .year{
   width: 10%;
   background: #fff;
   padding: 10px;
@@ -130,16 +133,16 @@ body{
   font-weight: 700;
   display: inline-block;
 }
-#education .description{
+#timeline .description{
   width: 80%;
   display: inline-block;
-  background: #eee;
+  background: $timeline_box_color;
   margin-bottom: 10px;
   position: relative;
   padding: 10px 10px 0 10px;
   border-bottom: 1px solid #ddd;
 }
-#education .description:after {
+#timeline .description:after {
   content: '';
   position: absolute;
   top: 15px;
@@ -153,14 +156,14 @@ body{
   pointer-events: none;
 }
 
-#education .description h3{
+#timeline .description h3{
   font-size: 1.6em;
   margin: 0;
   padding: 0;
   font-weight: 700;
 }
 
-#education .description h4{
+#timeline .description h4{
   color:#ec7263;
   font-size: 1.3em;
   margin: 0;
@@ -168,7 +171,7 @@ body{
   font-weight: 700;
   text-transform: uppercase;
 }
-#education .description p{
+#timeline .description p{
   font-size: 1.3em;
   margin-top: 5px;
   padding: 0;
@@ -231,7 +234,7 @@ body{
 /* Skills */
 .item-skills{
   height: 30px;
-  background: #F0563D;
+  background: $skills_bar_color;
   color: #fff;
   padding: 5px 10px;
   margin-bottom: 5px;
@@ -288,17 +291,17 @@ body{
 }
 
 /* Interests */
-.hobby{
+.interest {
   color: #fff;
   display: inline-block;
   margin-right: 5px;
   margin-bottom: 5px;
   padding: 5px 5px 5px 25px;
-  background: #A75265;
+  background: $interest_badge_color;
   position: relative;
   font-size: 1.2em;
 }
-.hobby:before{
+.interest:before{
   content: "\f004";
   font-family: FontAwesome;
   font-style: normal;
@@ -310,22 +313,22 @@ body{
 
 /* Media queries */
 @media (min-width: 500px) {
-  #education .description{
+  #timeline .description{
     width: 85%;
   }
 }
 @media (min-width: 768px) {
-  #education .description{
+  #timeline .description{
     width: 85%;
   }
 }
 @media (min-width: 992px) {
-  #education .description{
+  #timeline .description{
     width: 87%;
   }
 }
 @media (min-width: 1200px) {
-  #education .description{
+  #timeline .description{
     width: 90%;
   }
 }

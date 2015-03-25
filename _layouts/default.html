@@ -28,7 +28,7 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-7">
-          <!-- ABOUT ME -->
+          <!-- About me -->
           <div class="box">
             <h2>About Me</h2>
             {% for paragraph in site.data.about %}
@@ -39,7 +39,7 @@
           <!-- Timeline -->
           <div class="box">
             <h2>Timeline</h2>
-            <ul id="education" class="clearfix">
+            <ul id="timeline" class="clearfix">
               {% for period in site.data.timeline %}
               <li>
                 <div class="year pull-left">{{ period.year }}</div>
@@ -94,7 +94,7 @@
           <div class="box">
             <h2>Interests</h2>
             {% for interest in site.data.interests %}
-            <div class="hobby">{{ interest }}</div>
+            <div class="interest">{{ interest }}</div>
             {% endfor %}
           </div>
         </div>
