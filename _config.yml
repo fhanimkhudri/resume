@@ -1,0 +1,10 @@
+language: en-US
+name: Joey Jo-Jo Jr. Shabadoo
+title: My résumé
+description: Everything you have always wanted to know.
+timezone: America/New_York
+
+#-- Local configuration
+detach:  false
+port:    4000
+host:    127.0.0.1
