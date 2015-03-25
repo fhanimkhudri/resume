@@ -79,7 +79,7 @@
             <h2>Technical skills</h2>
             <div class="skills">
               {% for skill in site.data.skills %}
-              <div class="item-skills" data-percent="{{ skill.level }}">{{ skill.skill }}</div>
+              <div class="skill" data-percent="{{ skill.level }}">{{ skill.skill }}</div>
               {% endfor %}
               <div class="skills-legend clearfix">
                 <div class="legend-left legend">Beginner</div>
