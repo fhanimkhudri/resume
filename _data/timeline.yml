@@ -1,5 +1,5 @@
-- title: Supreme Leader
-  company: A soverign nation
+- title: Writer
+  company: Viking Press
   year: Today
   description:
     - The data in this column can be found in <code>_data/timeline.yml</code>

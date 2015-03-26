@@ -15,7 +15,7 @@
       <div class="row">
         <div class="col-xs-12">
           <div id="photo-header" class="text-center">
-            <!-- Avatar -->
+            <!-- Photo -->
             <div id="photo">
               <img src="assets/images/nyantocat.gif" alt="avatar">
             </div>
@@ -28,7 +28,8 @@
       </div>
       <div class="row">
         <div class="col-xs-12 col-sm-7">
-          <!-- About me -->
+
+          <!-- About -->
           <div class="box">
             <h2>About Me</h2>
             {% for paragraph in site.data.about %}
@@ -74,6 +75,7 @@
             </div>
             {% endfor %}
           </div>
+
           <!-- Technical skills -->
           <div class="box">
             <h2>Technical skills</h2>
@@ -88,6 +90,24 @@
                 <div class="legend-right legend">Expert</div>
               </div>
             </div>
+          </div>
+
+          <!-- Projects, awards, publications and certifications -->
+          <div class="box">
+            <h2>Projects</h2>
+            {% for project in site.data.projects %}
+            <div class="job clearfix">
+              <div class="col-xs-4">
+                <div class="year">{{ project.date }}</div>
+              </div>
+              <div class="col-xs-8">
+                <div class="profession">{{ project.name }}</div>
+                <div class="description">
+                  {{ project.description }}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
           </div>
 
           <!-- Interests -->
