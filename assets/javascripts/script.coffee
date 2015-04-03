@@ -2,20 +2,23 @@
 # this ensures Jekyll reads the file to be transformed into CSS later
 # only Main files contain this front matter, not partials.
 ---
-resizeSkillBar = ()->
-  $ ".skill"
-  .each ->
-    newWidth = $(this).parent().width() * $(this).data "percent"
-    $(this).animate width: newWidth, 500
-    return
-  return
+class Resume
+  constructor:(@skillBar) ->
+    @.listen window, 'resize',
+    ()=> resize skill for skill in @skillBar
 
-# Invoke `resizeSkillBar()` on initial load
-resizeSkillBar()
+    resize = (skillBar) ->
+      newWidth = $ skillBar
+      .parent().width() * $ skillBar
+      .data 'percent'
+      $ skillBar
+      .animate width: newWidth, 500
 
-# Invoke `resizeSkillBar()` each time the window is resized
-window
-.addEventListener "resize", (event) ->
-  resizeSkillBar()
-  return
-return
+  listen: (el, event, handler) ->
+    if el.addEventListener
+      el.addEventListener event, handler
+    else
+      el.attachEvent 'on' + event, ->
+        handler.call el
+
+resume = new Resume $ '.skill'
