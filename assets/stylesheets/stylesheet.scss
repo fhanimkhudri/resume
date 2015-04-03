@@ -24,6 +24,34 @@ body {
 	color: $color_tuatara_approx;
 	background: $color_gallery_approx;
 }
+
+h2 {
+	color: $color_terracotta_approx;
+	font-size: 1.8em;
+	font-weight: 700;
+	text-transform: uppercase;
+	&:before {
+		content: '//';
+		margin-right: 5px;
+	}
+}
+
+h3 {
+	font-size: 1.6em;
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+}
+
+h4{
+	color:$color_sunset_orange_approx;
+	font-size: 1.3em;
+	margin: 0;
+	padding: 0;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
 .container {
 	margin-top: 80px;
 	margin-bottom: 15px;
@@ -80,16 +108,7 @@ body {
 }
 .box {
 	margin-bottom: 15px;
-	h2 {
-		color: $color_terracotta_approx;
-		font-size: 1.8em;
-		font-weight: 700;
-		text-transform: uppercase;
-		&:before {
-			content: '//';
-			margin-right: 5px;
-		}
-	}
+
 	p {
 		font-size: 1.3em;
 		line-height: 1.5em;
@@ -111,14 +130,7 @@ body {
 		background: linear-gradient(to bottom, $white 0,$color_terracotta_approx 7%,$color_terracotta_approx 89%,$white 100%);
 		filter: progid:dximagetransform.microsoft.gradient(startcolorstr='$white', endcolorstr='$white',gradienttype=0 );
 	}
-  h4{
-    color:$color_sunset_orange_approx;
-    font-size: 1.3em;
-    margin: 0;
-    padding: 0;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+
 	li {
 		width: 100%;
 		z-index: 2;
@@ -154,12 +166,7 @@ body {
 			border-width: 8px;
 			pointer-events: none;
 		}
-		h3 {
-			font-size: 1.6em;
-			margin: 0;
-			padding: 0;
-			font-weight: 700;
-		}
+
 		p {
 			font-size: 1.3em;
 			margin-top: 5px;
@@ -167,17 +174,14 @@ body {
 		}
 	}
 }
-.job {
+.project {
 	margin-bottom: 15px;
-	.where {
-		font-size: 1.4em;
-		font-weight: bold;
-	}
-	.year {
+	.date {
 		font-size: 1.3em;
+		margin-bottom: 0.5em;
 		opacity: 0.7;
 	}
-	.profession {
+	.title {
 		font-size: 1.6em;
 		font-weight: bold;
 	}
@@ -188,7 +192,6 @@ body {
 }
 .contact-item {
 	width: 100%;
-	float: left;
 	.icon {
 		padding: 10px;
 		border-right: 1px solid $color_silver_chalice_approx;

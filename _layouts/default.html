@@ -21,7 +21,7 @@
             </div>
             <div id="text-header">
               <h1>{{ page.title | strip_html }}</h1>
-              <h2>{{ page.subtitle | strip_html }}</h2>
+              <p class="lead">{{ page.subtitle | strip_html }}</p>
             </div>
           </div>
         </div>
@@ -64,7 +64,7 @@
           <div class="box clearfix">
             <h2>Contact</h2>
             {% for contact in site.data.contacts %}
-            <div class="contact-item">
+            <div class="contact-item pull-left">
               <div class="icon pull-left text-center"><span class="fa fa-{{ contact.icon }} fa-fw"></span></div>
               <div class="title only pull-right">{{ contact.title }}</div>
               {% if contact.link %}
@@ -93,16 +93,12 @@
           <div class="box">
             <h2>Projects</h2>
             {% for project in site.data.projects %}
-            <div class="job clearfix">
-              <div class="col-xs-4">
-                <div class="year">{{ project.date }}</div>
-              </div>
-              <div class="col-xs-8">
-                <div class="profession">{{ project.name }}</div>
+            <div class="project">
+                <h3>{{ project.name }}</h3>
+                <div class="date">{{ project.date }}</div>
                 <div class="description">
                   {{ project.description }}
                 </div>
-              </div>
             </div>
             {% endfor %}
           </div>
