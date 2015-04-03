@@ -79,9 +79,12 @@
           <!-- Technical skills -->
           <div class="box">
             <h2>Technical skills</h2>
-            <div class="skills">
               {% for skill in site.data.skills %}
-              <div class="skill" data-percent="{{ skill.level }}">{{ skill.skill }}</div>
+              <div class="progress skills">
+                <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.level }}%;">
+                  <span class="sr-only">{{ skill.level }}% Complete</span>
+                </div>
+              </div>
               {% endfor %}
               <div class="skills-legend clearfix">
                 <div class="legend-left legend">Beginner</div>
@@ -90,7 +93,6 @@
                 <div class="legend-right legend">Expert</div>
               </div>
             </div>
-          </div>
 
           <!-- Projects, awards, publications and certifications -->
           <div class="box">
@@ -124,6 +126,5 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="assets/javascripts/script.js"></script>
   </body>
 </html>
