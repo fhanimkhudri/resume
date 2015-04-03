@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="{{ site.language }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ site.title | strip_html }}</title>
+    <meta name="description" content="{{ site.description | strip_html }}"/>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link href="assets/stylesheets/stylesheet.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <div id="photo-header" class="text-center">
+            <!-- Photo -->
+            <div id="photo">
+              <img src="assets/images/nyantocat.gif" alt="avatar">
+            </div>
+            <div id="text-header">
+              <h1>{{ page.title | strip_html }}</h1>
+              <h2>{{ page.subtitle | strip_html }}</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12 col-sm-7">
+
+          <!-- About -->
+          <div class="box">
+            <h2>About Me</h2>
+            {% for paragraph in site.data.about %}
+            <p>{{ paragraph }}</p>
+            {% endfor %}
+          </div>
+
+          <!-- Timeline -->
+          <div class="box">
+            <h2>Timeline</h2>
+            <ul id="timeline" class="clearfix">
+              {% for period in site.data.timeline %}
+              <li>
+                <div class="year pull-left">{{ period.year }}</div>
+                <div class="description pull-right">
+                  <h3>{{ period.title }}</h3>
+                  <h4>{{ period.company }}</h4>
+                  {% for paragraph in period.description %}
+                  <p>
+                    {{ paragraph }}
+                  </p>
+                  {% endfor %}
+                </div>
+              </li>
+            {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-5">
+
+          <!-- Contact -->
+          <div class="box clearfix">
+            <h2>Contact</h2>
+            {% for contact in site.data.contacts %}
+            <div class="contact-item">
+              <div class="icon pull-left text-center"><span class="fa fa-{{ contact.icon }} fa-fw"></span></div>
+              <div class="title only pull-right">{{ contact.title }}</div>
+              {% if contact.link %}
+              <div class="description pull-right">
+                <a href="{{ contact.link }}" target="_blank">{{ contact.link }}</a>
+              </div>
+              {% endif %}
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Technical skills -->
+          <div class="box">
+            <h2>Technical skills</h2>
+            <div class="skills">
+              {% for skill in site.data.skills %}
+              <div class="skill" data-percent="{{ skill.level }}">{{ skill.skill }}</div>
+              {% endfor %}
+              <div class="skills-legend clearfix">
+                <div class="legend-left legend">Beginner</div>
+                <div class="legend-left legend"><span>Novice</span></div>
+                <div class="legend-right legend"><span>Proficient</span></div>
+                <div class="legend-right legend">Expert</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Projects, awards, publications and certifications -->
+          <div class="box">
+            <h2>Projects</h2>
+            {% for project in site.data.projects %}
+            <div class="job clearfix">
+              <div class="col-xs-4">
+                <div class="year">{{ project.date }}</div>
+              </div>
+              <div class="col-xs-8">
+                <div class="profession">{{ project.name }}</div>
+                <div class="description">
+                  {{ project.description }}
+                </div>
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+
+          <!-- Interests -->
+          <div class="box">
+            <h2>Interests</h2>
+            {% for interest in site.data.interests %}
+            <div class="interest">{{ interest }}</div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script src="assets/javascripts/script.js"></script>
+  </body>
+</html>

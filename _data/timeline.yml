@@ -1,0 +1,25 @@
+- title: Writer
+  company: Viking Press
+  year: Today
+  description:
+    - The data in this column can be found in <code>_data/timeline.yml</code>
+    - Each paragraph is represented as an individual element in an array.
+
+- title: Baker
+  company: Market Basket
+  year: 2004
+  description:
+    - The content is in the <code>_data</code> directory to make it harder to screw up the formatting. If this were a usual Jekyll implementation, then the content would be located in the directory <code>_posts</code> and they would be Markdown, Textile or HTML files.
+    - You can <b>still</b> add <span style="color:blue;">valid HTML</span>, though.
+
+- title: Developer
+  company: GitHub
+  year: 2003
+  description:
+    - The "year" actually represents the "year left". So, the position at GitHub began in 2000 and lasted until 2003.
+
+- title: Student of Computer Science
+  company: University of Massachusetts Lowell
+  year: 2000
+  description:
+    - "Barley scraped by with a 2.04 GPA"
