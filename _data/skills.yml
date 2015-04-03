@@ -1,8 +1,14 @@
-- skill: Ruby
-  level: 100
+- name: Ruby
+  level:
+    description: Expert
+    value: 100
 
-- skill: Git
-  level: 58
+- name: Git
+  level:
+    description: Proficient
+    value: 80
 
-- skill: Jekyll
-  level: 80
+- name: Jekyll
+  level:
+    description: Intermediate
+    value: 58

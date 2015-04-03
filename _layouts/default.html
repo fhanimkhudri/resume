@@ -80,19 +80,14 @@
           <div class="box">
             <h2>Technical skills</h2>
               {% for skill in site.data.skills %}
-              <div class="progress skills">
-                <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.level }}%;">
-                  <span class="sr-only">{{ skill.level }}% Complete</span>
-                </div>
-              </div>
+                  <div class="progress">
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level.value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.level.value }}%;">
+                      <small class="pull-left">{{ skill.name }}</small>
+                      <span class="sr-only">{{ skill.level.value }}%</span>
+                    </div>
+                  </div>
               {% endfor %}
-              <div class="skills-legend clearfix">
-                <div class="legend-left legend">Beginner</div>
-                <div class="legend-left legend"><span>Novice</span></div>
-                <div class="legend-right legend"><span>Proficient</span></div>
-                <div class="legend-right legend">Expert</div>
-              </div>
-            </div>
+          </div>
 
           <!-- Projects, awards, publications and certifications -->
           <div class="box">
