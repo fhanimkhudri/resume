@@ -12,10 +12,16 @@
 
 /* Bootstrap overrides */
 .progress {
+	$height: 30px;
+
 	border-radius: 0px;
-	height: 30px;
+	height: $height;
 	margin-bottom: 5px;
+
+	.progress-bar {
+		line-height: $height;
 	}
+}
 
 body {
 	font-family: $font_0, $font_1, $font_2;
@@ -220,7 +226,7 @@ h4{
 	}
 }
 
-.interest {
+.tag {
 	color: $white;
 	display: inline-block;
 	margin-right: 5px;
@@ -229,6 +235,7 @@ h4{
 	background: $color_cadillac_approx;
 	position: relative;
 	font-size: 1.2em;
+	border-radius: 5px;
 	&:before {
 		content: "\f004";
 		font-family: $font_3;

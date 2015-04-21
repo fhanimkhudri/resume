@@ -81,8 +81,8 @@
             <h2>Technical skills</h2>
               {% for skill in site.data.skills %}
                   <div class="progress">
-                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level.value }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ skill.level.value }}%;">
-                      <small class="pull-left">{{ skill.name }}</small>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="{{ skill.level.value }}" aria-valuemin="0" aria-valuemax="100" style="min-width:2em; width:{{ skill.level.value }}%;">
+                      <span class="text-left">{{ skill.name }}</span>
                       <span class="sr-only">{{ skill.level.value }}%</span>
                     </div>
                   </div>
@@ -107,7 +107,7 @@
           <div class="box">
             <h2>Interests</h2>
             {% for interest in site.data.interests %}
-            <div class="interest">{{ interest }}</div>
+            <div class="tag">{{ interest }}</div>
             {% endfor %}
           </div>
         </div>
